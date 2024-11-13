@@ -1,28 +1,38 @@
 body {
-    color: rgb(255, 20, 147);
+    color: rgb(148, 0, 211);
     background: black;
-    margin: 0px;
+    margin: 0;
     font-family: "Chakra Petch", sans-serif;
     margin-bottom: 100px;
 }
 
 header {
-    border-bottom: solid 2px rgb(255, 20, 147);
+    border-bottom: solid 2px rgb(148, 0, 211);
     padding: 20px;
     font-size: 32px;
-    color: rgb(255, 20, 147);
+    color: rgb(148, 0, 211) !important;
+}
+
+header span {
+    color: #9400D3;
 }
 
 .chamada {
-    background: rgba(58, 8, 112, 0.706);
+    background: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnM0YWhtZDJ4aHhoczN1cG44MmxldWEyamV0dmlzdnV2aGw0eDh1NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/FMsbSSjEe0N6zH7K7x/giphy-downsized-large.gif') no-repeat center center;
+    background-size: cover;
     padding-bottom: 80px;
     padding-top: 80px;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+    gap: 250px;
+    position: relative;
 }
 
 .chamada-texto {
-    margin-right: 5%;
+    color: white;
+    position: relative;
+    z-index: 2;
 }
 
 h1 {
@@ -33,28 +43,69 @@ p {
     font-size: 20px;
 }
 
-.categoria-videos {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
-}
-
 .categoria {
     padding-left: 20px;
     padding-right: 20px;
     margin-top: 50px;
 }
 
+.categoria-videos {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    scrollbar-width: thin; /* Para Firefox */
+    scrollbar-color: #9400D3 black; /* Para Firefox */
+}
+
+.categoria-videos::-webkit-scrollbar {
+    height: 8px; /* Altura da barra de rolagem */
+    background-color: black; /* Cor de fundo da barra de rolagem */
+}
+
+.categoria-videos::-webkit-scrollbar-thumb {
+    background-color: #9400D3; /* Cor da parte que você arrasta */
+    border-radius: 10px; /* Arredondamento do polegar */
+}
+
+.categoria-videos::-webkit-scrollbar-thumb:hover {
+    background-color: #B450D3; /* Cor do polegar ao passar o mouse */
+}
+
 .categoria-videos img {
     opacity: 0.5;
     height: 200px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .categoria-videos img:hover {
     opacity: 1.0;
-    border: 3px solid rgb(102, 0, 128);
+    border: 3px solid rgb(148, 0, 211);
+    transform: scale(1.05);
 }
 
 .categoria h2 {
-    color: rgb(255, 20, 147);
+    color: rgb(148, 0, 211);
+}
+
+/* Adicionando barra de rolagem para a segunda categoria */
+.categoria-videos-second {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    scrollbar-width: thin; /* Para Firefox */
+    scrollbar-color: #9400D3 black; /* Para Firefox */
+}
+
+.categoria-videos-second::-webkit-scrollbar {
+    height: 8px; /* Altura da barra de rolagem */
+    background-color: black; /* Cor de fundo da barra de rolagem */
+}
+
+.categoria-videos-second::-webkit-scrollbar-thumb {
+    background-color: #9400D3; /* Cor da parte que você arrasta */
+    border-radius: 10px; /* Arredondamento do polegar */
+}
+
+.categoria-videos-second::-webkit-scrollbar-thumb:hover {
+    background-color: #B450D3; /* Cor do polegar ao passar o mouse */
 }
